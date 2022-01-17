@@ -1,0 +1,73 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sample Collection",
+		"_postman_id": "35567af6-6b92-26c2-561a-21fe8aeeb1ea",
+		"description": "A sample collection to demonstrate collections as a set of related requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [		
+		{
+			"name": "Login User",
+			"request": {
+				"url": "http://localhost/phpapi/login.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"sam22@gmail.com\"  ,  \"password\":\"test123456\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"url": "http://localhost/phpapi/register.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"demo user\" , \"email\":\"sam22@gmail.com\"  ,  \"password\":\"test123456\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"url": "http://localhost/phpapi/getUser.php",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"auth" : [
+					{
+						"type" : "barer token"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"sam22@gmail.com\"  ,  \"password\":\"test123456\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
